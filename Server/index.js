@@ -5,7 +5,6 @@ const io = require("socket.io")(http, {
 
 io.on("connection", (socket) => {
   socket.on("message", ({ user, message }) => {
-    console.log(message, socket);
     io.emit("message", `${user.name}: ${message}`);
   });
 });

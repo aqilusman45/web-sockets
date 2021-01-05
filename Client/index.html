@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebSockets</title>
-</head>
-<body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.5/socket.io.min.js"
+      integrity="sha512-L9L4VhE0D58fCxtJiYDHbIzSVfNGY24rhQPWTZPschTVKLpucPsLeT0FSjfnylLYARalTQqgwXsjjhi+wUTwIw=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./app.js"></script>
+  </head>
+  <body>
     <h1>Cricket Chat Group!</h1>
-</body>
+    <ul id="messages"></ul>
+    <form onsubmit="sendMessage(event)">
+      <input type="text" name="message" />
+      <button type="submit">Send</button>
+    </form>
+    <form onsubmit="setName(event)">
+        <input type="text" name="name" placeholder="Set a username" />
+        <button type="submit">Send</button>
+      </form>
+  </body>
 </html>
